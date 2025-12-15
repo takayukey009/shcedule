@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>寺崎ひなタスク一覧</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=3">
+    <link rel="apple-touch-icon" href="icon.jpg">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <div class="header-content">
+                <h1>寺崎ひなタスク一覧</h1>
+                <p class="date-display" id="currentDate">2025.11.19</p>
+            </div>
+        </header>
+
+        <main class="task-list-container" id="taskList">
+            <!-- Tasks will be injected here -->
+        </main>
+
+        <button class="fab" id="addTaskBtn">
+            <span class="material-symbols-rounded">add</span>
+        </button>
+    </div>
+
+    <!-- Add Task Modal -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal">
+            <h2>寺崎ひなの新しいタスク</h2>
+            <input type="text" id="taskTitle" placeholder="どんなタスクですか？" autocomplete="off">
+            <textarea id="taskDescription" placeholder="詳細（任意）" rows="3"></textarea>
+            <input type="url" id="taskLink" placeholder="リンクURL（任意）" autocomplete="off">
+            <div class="modal-options">
+                <div class="option-group">
+                    <label>期限</label>
+                    <div class="date-input-wrapper">
+                        <input type="date" id="taskDate">
+                        <div class="asap-wrapper">
+                            <input type="checkbox" id="taskASAP">
+                            <label for="taskASAP">なるはや</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="option-group">
+                    <label>担当</label>
+                    <select id="taskAssignee">
+                        <option value="Hina">Hina</option>
+                        <option value="Togawa">Togawa</option>
+                    </select>
+                </div>
+            </div>
+            <div class="modal-actions">
+                <button class="btn-cancel" id="cancelBtn">キャンセル</button>
+                <button class="btn-save" id="saveBtn">保存</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="app.js?v=3"></script>
+</body>
+
+</html>
